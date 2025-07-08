@@ -39,4 +39,7 @@ export KOPS_STATE_STORE=s3://dev.k8s.sanjayskv.in(bucketname.com)
 ->  kops update cluster dev.k8s.sanjayskv.in --yes --admin
 -> kops validate cluster(wait)
 -> kubectl get nodes 
-
+-> kops delete cluster --name=dev.k8s.example.com --yes
+if not deleted 
+-> export KOPS_STATE_STORE=s3://dev.k8s.sanjayskv.in(bucketname.com)
+-> kops delete cluster --name=dev.k8s.example.com --yes
